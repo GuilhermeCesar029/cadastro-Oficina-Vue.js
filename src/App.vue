@@ -7,11 +7,16 @@
     <input type="number" placeholder="CPF" v-model="cpfField"><br>
     <input type="text" placeholder="placa do carro" v-model="placaField"><br>
     <button @click="cadastrarUsuario">Cadastrar</button>
+    <hr>
+                                      <!--key para identificar um cliente do outro-->
+    <div v-for="cliente in clientes" :key="cliente.id">
+      <Oficina :cliente="cliente"/>
+    </div>
   </div>
 </template>
 
 <script>
-  //import Oficina from './components/Oficina'
+  import Oficina from './components/Oficina'
 
 export default {
   name: 'App',
@@ -34,9 +39,9 @@ export default {
       ]
     }
   },
-  /*components: {
+  components: {
     Oficina
-  }*/
+  },
   methods: {
     cadastrarUsuario: function(){
       this.clientes.push({
