@@ -1,11 +1,14 @@
 <template>
   <div id="app">
     <h3>Cadastro de Clientes</h3>
-    <input type="text" placeholder="nome" v-model="nomeField"><br>
-    <input type="text" placeholder="sobrenome" v-model="sobreNomeField"><br>
-    <input type="text" placeholder="email" v-model="emailField"><br>
-    <input type="text" placeholder="###.###.###-##" v-model="cpfField"  v-mask="'###.###.#####'"><br>
-    <input type="text" placeholder="AAA-###" v-model="placaField" v-mask="'AAA-###'"><br>
+    <form action="">
+      <input type="text" placeholder="nome" v-model="nomeField" required><br>
+      <input type="text" placeholder="sobrenome" v-model="sobreNomeField" required><br>
+      <input type="text" placeholder="email" v-model="emailField" required><br>
+      <input type="text" placeholder="###.###.###-##" v-model="cpfField"  v-mask="'###.###.###-##'" required><br>
+      <input type="text" placeholder="AAA-###" v-model="placaField" v-mask="'AAA-####'" required><br>
+      <button type="submit">cadastrar</button>
+    </form>
   </div>
 </template>
 
