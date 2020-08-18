@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h3>Cadastro de Clientes</h3>
+    <h2>Cadastro de Clientes</h2>
     <cadastro/>
   </div>
 </template>
@@ -16,3 +16,8 @@
   }
 </script>
 
+<style scoped>
+  h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+</style>
