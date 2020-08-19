@@ -1,23 +1,24 @@
 <template>
-  <div id="app">
-    <h2>Cadastro de Clientes</h2>
-    <cadastro/>
-  </div>
+  <v-app>
+    <v-main>
+      <h2 class="text-center">Cadastro de Clientes</h2>
+      <cadastro/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-  import cadastro from './components/cadastro'
+import cadastro from './components/cadastro';
 
-  export default {
-    name: 'App',
-    components: {
-      cadastro
-    }
-  }
+export default {
+  name: 'App',
+
+  components: {
+    cadastro,
+  },
+
+  data: () => ({
+    //
+  }),
+};
 </script>
-
-<style scoped>
-  h2{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-</style>

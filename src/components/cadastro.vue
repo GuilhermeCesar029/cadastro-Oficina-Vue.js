@@ -1,4 +1,4 @@
-<template>
+<!--<template>
     <div>
         <form id="cadastro" action="">
             <label for="">Nome: </label>
@@ -18,12 +18,71 @@
             <button type="submit">cadastrar</button>
         </form>
     </div>
+</template>-->
+
+<template>
+  <v-row justify="center">
+    <v-col cols="12" sm="10" md="8" lg="6">
+      <v-form ref="form"
+        v-model="valid"
+        lazy-validation>
+        <v-card ref="form">
+          <v-card-text>
+            <v-text-field
+              v-model="nomeField"
+              box
+              color="deep-purple"
+              label="Nome"
+              placeholder="Nome"
+              required
+            ></v-text-field>
+            <v-text-field
+              v-model="sobreNomeField"
+              box
+              color="deep-purple"
+              label="sobrenome"
+              placeholder="Sobrenome"
+              required
+            ></v-text-field>
+            <v-text-field
+              v-model="emailField"
+              box
+              color="deep-purple"
+              label="email"
+              placeholder="sistema@gmail.com"
+              required
+            ></v-text-field>
+            <v-text-field
+              v-model="cpfField"
+              box
+              color="deep-purple"
+              label="CPF"
+              placeholder="000.000.000-00"
+              mask="###.###.###-##"
+              required
+            ></v-text-field>
+            <v-text-field
+              v-model="placaField"
+              box
+              color="deep-purple"
+              label="Placa do Veiculo"
+              placeholder="AAA-0000"
+              mask="AAA-###"
+              required
+            ></v-text-field>
+            <v-btn :disabled="!valid" color="success">cadastrar</v-btn>
+          </v-card-text>          
+        </v-card>
+      </v-form>  
+    </v-col>
+  </v-row>
 </template>
 
 <script>
 
 export default {
   data(){
+     mask: '/^[a-z][0-9]+(-[a-z][0-9]+)*$/'
     return {
       nomeField: "",
       sobreNomeField: "",
@@ -35,6 +94,7 @@ export default {
 }
 </script>
 
+<!--
 <style>
   #app {
     text-align: center;
@@ -53,4 +113,4 @@ export default {
       border-radius: 15%;
       color: black;
   }
-</style>
+</style>-->
